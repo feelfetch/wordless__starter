@@ -1,0 +1,35 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "plugins": ["babel"],
+  "extends": ["airbnb/base"],
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es6": true
+  },
+  "globals": {
+    "Promise": true
+  },
+  "rules": {
+    "indent": [2, "tab"],
+    "no-tabs": 0,
+    "comma-dangle": 0,
+    "no-underscore-dangle": [2, { "allow": ["_this"] }],
+    "no-param-reassign": [2, { "props": false }],
+    "no-multiple-empty-lines": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["node_modules/", "node_modules/@types"]
+      }
+    }
+  }
+}
