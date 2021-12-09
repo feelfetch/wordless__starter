@@ -3,7 +3,7 @@
 
 		<div data-scroll data-scroll-direction="vertical" data-scroll-speed="-8" data-scroll-target="#colophon" data-scroll-position="bottom">
 			<article class="site-footer dt w-100 bg-black">
-				<section class="dtc v-mid tc white ph3 ph4-l" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
+				<section class="dtc v-mid tc white ph3 ph4-l footerContent" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
 
 					<div class="dt-ns dt--fixed-ns">
 					  <div class="dtc-ns v-mid">

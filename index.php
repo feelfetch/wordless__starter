@@ -34,17 +34,17 @@
     </article>
 
     <article class="vh-100 dt w-100 bg-white relative z-2" data-scroll-section>
-      <section class="dtc v-mid tc black ph3 ph3-m ph6-ns ttu" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://github.com/lukehoban/es6features#readme" target="_blank">ES6</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://babeljs.io/" target="_blank">Babel</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://eslint.org/" target="_blank">ESLint</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="http://sass-lang.com/" target="_blank">SASS</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="http://tachyons.io/" target="_blank">Tachyons</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://locomotivemtl.github.io/locomotive-scroll/" target="_blank">Locomotive Scroll</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://barba.js.org/" target="_blank">Barba Js</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://greensock.com/gsap/" target="_blank">GSAP</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://gulpjs.com/" target="_blank">Gulp 4</a>
-        <a class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://webpack.js.org/" target="_blank">Webpack 5</a>
+      <section class="dtc v-mid tc black ph3 ph3-m ph6-ns ttu pillsContainer" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://github.com/lukehoban/es6features#readme" target="_blank">ES6</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://babeljs.io/" target="_blank">Babel</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://eslint.org/" target="_blank">ESLint</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="http://sass-lang.com/" target="_blank">SASS</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="http://tachyons.io/" target="_blank">Tachyons</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://locomotivemtl.github.io/locomotive-scroll/" target="_blank">Locomotive Scroll</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://barba.js.org/" target="_blank">Barba Js</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://greensock.com/gsap/" target="_blank">GSAP</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://gulpjs.com/" target="_blank">Gulp 4</a>
+        <a data-scroll data-scroll-class="appear" data-scroll-repeat="true" class="f4 f4-m f2-ns br-pill ph5 pv4 mb3 dib black bg-white hover-white hover-bg-black ba" href="https://webpack.js.org/" target="_blank">Webpack 5</a>
       </section>
     </article>
 
