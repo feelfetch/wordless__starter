@@ -10,5 +10,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site" data-barba="container" data-barba-namespace="home">
 
+	<div class="cursor"></div>
+
 	<header id="masthead" class="site-header" data-barba="wrapper">
 	</header><!-- #masthead -->

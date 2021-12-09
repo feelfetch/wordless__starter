@@ -1,16 +1,21 @@
-
 $font-size-root:62.5%; // 1rem = 10px
 $font-size-base:1.4rem;
 $font-weight-base:400;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
-$border-radius:.4rem;
-$primary:blue;
-$btn-box-shadow:none;
-$btn-active-box-shadow:none;
-$btn-focus-box-shadow:none;
-$input-btn-focus-box-shadow:none;
-$input-border-radius:0;
-$grid-columns:12;
-$grid-gutter-width:3rem;
 $body-color:black;
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}

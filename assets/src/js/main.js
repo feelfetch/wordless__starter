@@ -1,78 +1,107 @@
-import General from './_generalScripts';
 import barba from '@barba/core';
 import LocomotiveScroll from 'locomotive-scroll';
-
-const App = {
-
-	/**
-	 * App.init
-	 */
-	init() {
-		// General scripts
-		function initGeneral() {
-			return new General();
-		}
-		initGeneral();
-	}
-
-};
+import gsap from 'gsap';
 
 document.addEventListener('DOMContentLoaded', () => {
-	App.init();
-
-	const scroll = new LocomotiveScroll({
+  const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     smoothMobile: true,
-    // direction:"horizontal",
-    // inertia:1,
-    // repeat:true,
-    offset: ["3%", 100]
-	});
+    offset: ['3%', 100],
+    lerp: 0.09,
+    smartphone: {
+      smooth: true
+    }
+  });
 
-	function pageIn(){
-		gsap.to('#content',{});
-	}
+  function pageIn() {
+    gsap.to('#content', {});
+  }
 
-	function pageOut(){
-			gsap.to('#content',{});
-	}
+  function pageOut() {
+    gsap.to('#content', {});
+  }
 
-	function pageDelay(num) {
-			return new Promise(function(resolve){
-					setTimeout(resolve,num)
-			})
-	}
+  function pageDelay(num) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, num);
+});
+  }
 
-	barba.init({
-		transitions: [{
-			name: 'transition',
-			async leave(data) {
-				pageIn();
-				await pageDelay(1500);
+  barba.init({
+    transitions: [{
+      name: 'transition',
+      async leave(data) {
+        pageIn();
+        await pageDelay(1500);
+      },
 
-			},
+      enter(data) {
+        pageOut();
+        // Set <body> classes for 'next' page
+        const nextHtml = data.next.html;
+        const response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml);
+        const bodyClasses = $(response).filter('notbody').attr('class');
+        $('body').attr('class', bodyClasses);
+      },
 
-			enter(data) {
-				pageOut();
-				// Set <body> classes for "next" page
-				 var nextHtml = data.next.html;
-				 var response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml)
-				 var bodyClasses = $(response).filter('notbody').attr('class')
-				 $("body").attr("class", bodyClasses);
-			},
+      async once(data) {
+        pageIn();
+        await pageDelay(1500);
+        pageOut();
+      }
 
-			async once(data) {
-				pageIn();
-				await pageDelay(1500);
-				pageOut();
-			}
+    }]
+  });
 
-		}]
-	});
+  barba.hooks.beforeLeave(() => {
+    scroll.scrollTo('top');
+  });
 
-	barba.hooks.beforeLeave(() => {
-		scroll.scrollTo("top");
-	});
+  gsap.set('.cursor', {
+    force3D: true
+  });
 
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    gsap.to('.cursor', {
+      x: x - 16,
+      y: y - 16,
+      ease: 'power3'
+    });
+  });
+
+  document.body.addEventListener('mouseleave', () => {
+    gsap.to('.cursor', {
+      scale: 0,
+      duration: 0.1,
+      ease: 'none'
+    });
+  });
+
+  document.body.addEventListener('mouseenter', () => {
+    gsap.to('.cursor', {
+      scale: 1,
+      duration: 0.1,
+      ease: 'none'
+    });
+  });
+
+  const hoverCursor = document.querySelectorAll('a');
+
+  hoverCursor.forEach((cursor) => {
+    cursor.addEventListener('mouseenter', () => {
+      gsap.to('.cursor', {
+        scale: 2
+      });
+    });
+
+    cursor.addEventListener('mouseleave', () => {
+      gsap.to('.cursor', {
+        scale: 1
+      });
+    });
+  });
 });

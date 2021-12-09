@@ -16,7 +16,7 @@
     "Promise": true
   },
   "rules": {
-    "indent": [2, "tab"],
+    "indent": [0, "tab"],
     "no-tabs": 0,
     "comma-dangle": 0,
     "no-underscore-dangle": [2, { "allow": ["_this"] }],
