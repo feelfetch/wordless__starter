@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
-    "gsap": "^3.9.1",
+    "gsap": "^3.10.2",
     "locomotive-scroll": "^4.1.4",
     "tachyons-sass": "^4.9.5"
   }
